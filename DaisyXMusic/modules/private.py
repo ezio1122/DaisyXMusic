@@ -39,7 +39,7 @@ def _start(client, message):
                         "💬 Support", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "🛠 Source Code 🛠", url=f"https://{SOURCE_CODE}")
+                        "❤😌 My Master 😌❤", url=f"https://t.me/Cyber_Dark_0")
                 ]
             ]
         ),
@@ -49,7 +49,7 @@ def _start(client, message):
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
     await message.reply_text(
-        f"""**🔴 {PROJECT_NAME} is online**""",
+        f"""**🔴 {PROJECT_NAME} is online 🥰**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -97,7 +97,7 @@ def map(pos):
             [InlineKeyboardButton("➕ Add me to your Group 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = '📲 Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
              InlineKeyboardButton(text = '💬 Support', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '🛠 My Master 🛠', url=f"https://t.me/Cyber_Dark_0")],
+            [InlineKeyboardButton(text = '❤😌 My Master 😌❤', url=f"https://t.me/Cyber_Dark_0")],
             [InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}")]
         ]
     else:
@@ -112,7 +112,7 @@ def map(pos):
 @Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        f"""**🙋‍♀️ Hello there! I can play music in the voice chats of telegram groups & channels.**""",
+        f"""**🙋‍♀️ Hello there!🙂 I can play music in the voice chats of telegram groups & channels😉.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
