@@ -265,7 +265,7 @@ async def hfmm(_, message):
     status = message.text.split(None, 1)[1]
     message.chat.id
     if status == "ON" or status == "on" or status == "On":
-        lel = await message.reply("`Processing...`")
+        lel = await message.reply("`Processing... 🥰`")
         if not message.chat.id in DISABLED_GROUPS:
             await lel.edit("Music Player Already Activated In This Chat")
             return
@@ -275,7 +275,7 @@ async def hfmm(_, message):
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
-        lel = await message.reply("`Processing...`")
+        lel = await message.reply("`Processing... 🥰`")
         
         if message.chat.id in DISABLED_GROUPS:
             await lel.edit("Music Player Already turned off In This Chat")
@@ -469,7 +469,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔄 **Processing**")
+    lel = await message.reply("🔄 🥰**Processing**🥰")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -577,7 +577,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🎵 **Processing**")
+        await lel.edit("🎵 🥰**Processing**🥰")
         ydl_opts = {"format": "bestaudio/best"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -621,7 +621,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("🎵 **Processing**")
+        await lel.edit("🎵 🥰**Processing**🥰")
         ydl_opts = {"format": "bestaudio/best"}
         
         try:
@@ -661,7 +661,7 @@ async def play(_, message: Message):
             return
             # Returning to pornhub
         except:
-            await lel.edit("No Enough results to choose.. Starting direct play..")
+            await lel.edit("No Enough results to choose ☹.. Starting direct play 🙂..")
                         
             # print(results)
             try:
@@ -677,7 +677,7 @@ async def play(_, message: Message):
 
             except Exception as e:
                 await lel.edit(
-                    "Song not found.Try another song or maybe spell it properly."
+                    "Song not found ☹.Try another song or maybe spell it properly 🤓."
                 )
                 print(str(e))
                 return
@@ -732,7 +732,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Playing** here the song requested by {} via Youtube Music 😜".format(
+            caption="▶️ 🤗🥰**Playing**🥰🤗 here the song requested by {} via Youtube Music 😜".format(
                 message.from_user.mention()
             ),
         )
@@ -745,7 +745,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔄 **Processing**")
+    lel = await message.reply("🔄 🥰**Processing**🥰")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -799,7 +799,7 @@ async def ytplay(_, message: Message):
             f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
         )
         return
-    await lel.edit("🔎 **Finding**")
+    await lel.edit("🔎 🤗**Finding**🤗")
     user_id = message.from_user.id
     user_name = message.from_user.first_name
      
@@ -808,7 +808,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🎵 **Processing**")
+    await lel.edit("🎵 🥰**Processing**🥰")
     ydl_opts = {"format": "bestaudio/best"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -880,7 +880,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Playing** here the song requested by {} via Youtube Music 😜".format(
+            caption="▶️ 🤗🥰**Playing**🥰🤗 here the song requested by {} via Youtube Music 😜".format(
                 message.from_user.mention()
             ),
         )
@@ -893,7 +893,7 @@ async def jiosaavn(client: Client, message_: Message):
     global que
     if message_.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🔄 🥰**Processing**🥰")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -1156,6 +1156,6 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"▶️ **Playing** here the song requested by {r_by.mention} via Youtube Music 😜",
+            caption=f"▶️ 🤗🥰**Playing**🥰🤗 here the song requested by {r_by.mention} via Youtube Music 😜",
         )
         os.remove("final.png")
